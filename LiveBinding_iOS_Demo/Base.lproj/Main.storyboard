@@ -240,6 +240,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="faceView" destination="jPL-H4-Ejn" id="pTN-eZ-5ie"/>
                         <outlet property="nextButton" destination="sDG-ZR-IUd" id="RhS-qq-NnJ"/>
                         <outlet property="noButton" destination="QnT-15-uNy" id="xTc-6J-SI2"/>
                         <outlet property="quetionLabel" destination="rg7-qp-ZCr" id="3eO-yQ-HLa"/>

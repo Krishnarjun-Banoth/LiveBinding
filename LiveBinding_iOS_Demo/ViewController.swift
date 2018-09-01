@@ -20,6 +20,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var nextButton: RoundedButtons!
   @IBOutlet weak var scoreLabel: UILabel!
   
+  @IBOutlet weak var faceView: RoundView!
   //MARK: - DATA HOLDERS
   var myScore = 0
   let operatorArray = ["+","-","*","/"]
@@ -120,6 +121,7 @@ extension ViewController {
 //MARK: - Custom Accessors
 extension ViewController {
   func initialSetupForNewQuestion() {
+    changeFaceViewBgColor()
     enableAnswerButtons()
     resetTimer()
     timer.invalidate()
@@ -186,6 +188,11 @@ extension ViewController {
     timer.invalidate()
     resetFocusTimer()
     runFocusTimer()
+  }
+  func changeFaceViewBgColor(){
+    if myScore % 10 == 0 {
+      faceView.bgColor = randomQuestionViewColor[Int(arc4random_uniform(UInt32(randomQuestionViewColor.count)))]
+    }
   }
 }
 
